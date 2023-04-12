@@ -1,6 +1,7 @@
 import random
 
 # Constants here 
+
 VALID_WORDS = ['tests', 'others', "halloweens", "series", "accomplices", "shows"]
 MAX_NUMBER_OF_GUESSES = 6
 
@@ -10,12 +11,10 @@ USERS_INPUTS = [""]
 # Pick a word for hangman round
 def pick_word():
     r = random.choice(VALID_WORDS)
-    print(r)
-    return r
-    pass
 
 
 # Create a function to draw the guillotine
+
 def draw_guillotine(counter):
     if counter == 0:
         print(  '   _____ \n'
