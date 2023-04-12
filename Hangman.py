@@ -1,20 +1,20 @@
 import random
 
 # Constants here 
+
 VALID_WORDS = ['tests', 'others', "halloweens", "series", "accomplices", "shows"]
 MAX_NUMBER_OF_GUESSES = 6
 
 # ex: keep track of user's inputs, potential list of words to choose from, etc...
-USERS_INPUTS = ["s"]
+USERS_INPUTS = [""]
+
 # Pick a word for hangman round
-def pick_word():
+def pick_word(r):
     #return a word from VALID_WORDS
     r = random.choice(VALID_WORDS)
-    print(r)
-    return r
-    pass
 
 # Create a function to draw the guillotine
+
 def draw_guillotine(counter):
     if counter == 0:
         print(  '   _____ \n'
@@ -63,7 +63,6 @@ def draw_guillotine(counter):
                 '__|__\n')
         
     
-
 
 # Create a function to take the user's inputs (letters)
 def accept_letter(r):
@@ -124,11 +123,3 @@ if __name__ == '__main__':
         print(counter)
     if check_answer(r) is True:
         print("Congrats! You won!")
-    # pick word
-    # draw guillotine with underscores
-    # for loop for max guesses
-        # take user input
-        # redraw hangman
-        # check if guessed word is same as picked word
-            # if guessed correctly, print you win and exit for loop using 'break'
-    # if guessed word not picked word then print game over and print dead hangman
