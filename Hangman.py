@@ -5,14 +5,15 @@ VALID_WORDS = ['tests', 'others', "halloweens", "series", "accomplices", "shows"
 MAX_NUMBER_OF_GUESSES = 6
 
 # ex: keep track of user's inputs, potential list of words to choose from, etc...
-USERS_INPUTS = ["s"]
+USERS_INPUTS = [""]
+
 # Pick a word for hangman round
 def pick_word():
-    #return a word from VALID_WORDS
     r = random.choice(VALID_WORDS)
     print(r)
     return r
     pass
+
 
 # Create a function to draw the guillotine
 def draw_guillotine(counter):
@@ -62,12 +63,9 @@ def draw_guillotine(counter):
                 '  |    / \ \n'
                 '__|__\n')
         
-    
-
 
 # Create a function to take the user's inputs (letters)
 def accept_letter(r):
-    #make sure to reject if user inputs a number or more than one character
     while True:
         a = input("Guess: ")
         ch = a
@@ -85,6 +83,9 @@ def accept_letter(r):
             print("letter not in word")
             USERS_INPUTS.append(ch)
             return False 
+
+
+#This draws the underscores and replaces them once a letter is correctly guessed. Ex: t _ _ s _ _
 def print_answer(r):
     c = ""
     for x in r:
@@ -94,10 +95,8 @@ def print_answer(r):
             c += "_"
     print (c)
 
-# Create a function to play out each round
-def play_round():
-    pass
 
+# Checks if the answer/input is correct 
 def check_answer(r):
     missing_word = True
     for x in r:
@@ -124,11 +123,4 @@ if __name__ == '__main__':
         print(counter)
     if check_answer(r) is True:
         print("Congrats! You won!")
-    # pick word
-    # draw guillotine with underscores
-    # for loop for max guesses
-        # take user input
-        # redraw hangman
-        # check if guessed word is same as picked word
-            # if guessed correctly, print you win and exit for loop using 'break'
-    # if guessed word not picked word then print game over and print dead hangman
+
