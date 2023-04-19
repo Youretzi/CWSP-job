@@ -39,7 +39,6 @@ def draw_guillotine(counter):
             '  |      \n'
             '  |      \n'
             '  |      \n'
-            '  |      \n'
             '__|__\n')
     elif counter == 2:
          print('   _____ \n'
@@ -50,7 +49,6 @@ def draw_guillotine(counter):
             '  |      \n'
             '  |      \n'
             '__|__\n')
-
     elif counter == 3:
         print('   _____ \n'
             '  |     | \n'
@@ -168,4 +166,5 @@ if __name__ == '__main__':
     if first and second is True:
         print("Congrats! You won!")
     print("Words:", r, s)
+
 
